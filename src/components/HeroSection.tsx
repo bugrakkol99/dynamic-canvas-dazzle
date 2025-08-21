@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatedButton } from './ui/animated-button'
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react'
-import heroImage from '../assets/hero-portrait.jpg'
+import { TechSphere } from './TechSphere'
 
 const TypeWriter = ({ text, delay = 100 }: { text: string; delay?: number }) => {
   const [currentText, setCurrentText] = useState('')
@@ -134,17 +134,10 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Image */}
+          {/* Tech Sphere */}
           <div className="relative lg:order-2 animate-[scale-in_1s_ease-out_0.3s_both]">
             <div className="relative z-10">
-              <div className="relative overflow-hidden rounded-3xl glow-border">
-                <img
-                  src={heroImage}
-                  alt="Ahmet - MIS Öğrencisi"
-                  className="w-full max-w-md mx-auto lg:max-w-lg object-cover aspect-square hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
-              </div>
+              <TechSphere />
             </div>
             
             {/* Floating Elements */}
